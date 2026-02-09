@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GamePreferencesData xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <_playerName>Zliplier</_playerName>
+  <_score>200</_score>
+  <_musicVolume>1</_musicVolume>
+  <_SFXVolume>1</_SFXVolume>
+</GamePreferencesData>
