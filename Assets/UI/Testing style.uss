@@ -1,5 +1,145 @@
-:root {
+.Level {
+    font-size: 40px;
+    width: 27%;
+    -unity-text-align: lower-left;
+    color: rgb(255, 255, 255);
+    flex-shrink: 0;
 }
 
-.header {
+.Exp {
+    font-size: 35px;
+    -unity-text-align: lower-left;
+    color: rgb(255, 255, 255);
+    width: 150%;
+    flex-shrink: 0;
+    flex-grow: 1;
+}
+
+.CharacterName {
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    flex-grow: 1;
+}
+
+.ClassName {
+    color: rgb(0, 0, 0);
+    font-size: 25px;
+    width: auto;
+    max-width: none;
+    flex-grow: 1;
+    flex-shrink: 0;
+    background-color: rgba(255, 255, 255, 0.72);
+}
+
+.HealthNumber {
+    font-size: 30px;
+    -unity-text-align: upper-right;
+    color: rgb(255, 255, 255);
+}
+
+.TableHeader {
+    background-color: rgb(255, 255, 255);
+    font-size: 25px;
+    top: 0%;
+}
+
+.TableContent {
+    background-color: rgba(0, 0, 0, 0.7);
+    font-size: 22px;
+    color: rgb(255, 255, 255);
+}
+
+.Resistance {
+    font-size: 22px;
+    color: rgb(255, 255, 255);
+    -unity-text-align: upper-center;
+    right: 0%;
+    left: 0%;
+    width: 25%;
+}
+
+.Portrait {
+    flex-grow: 1;
+    flex-shrink: 1;
+    max-width: 5.6%;
+    flex-basis: auto;
+    flex-direction: row;
+    align-self: flex-start;
+    justify-content: center;
+    align-content: flex-start;
+    width: 20%;
+    height: 90%;
+    min-width: 0%;
+    -unity-text-align: middle-center;
+    top: -8%;
+    opacity: 1;
+    left: 0%;
+    right: 0%;
+    background-color: rgb(255, 255, 255);
+}
+
+.CharSelectButton:hover {
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+    rotate: 10deg;
+    background-color: rgb(204, 0, 0);
+    color: rgb(255, 255, 255);
+}
+
+.ExitButton {
+    flex-shrink: 1;
+    flex-grow: 1;
+    max-width: 3%;
+    width: 3%;
+    height: 30%;
+    max-height: 30%;
+    justify-content: flex-start;
+    align-self: center;
+    right: 3%;
+    top: auto;
+    bottom: -10%;
+}
+
+.ExitButton:hover {
+    flex-shrink: 1;
+    flex-grow: 1;
+    max-width: 3%;
+    width: 3%;
+    height: 30%;
+    max-height: 30%;
+    justify-content: flex-start;
+    align-self: center;
+    right: 3%;
+    top: auto;
+    bottom: -10%;
+    scale: 1.1 1.2;
+    transition-duration: 0.5s;
+    rotate: -15deg;
+    color: rgb(255, 255, 255);
+    background-color: rgb(109, 109, 255);
+    transition-timing-function: ease-in-out-sine;
+}
+
+.Portrait:hover {
+    flex-grow: 1;
+    flex-shrink: 1;
+    max-width: 5.6%;
+    flex-basis: auto;
+    flex-direction: row;
+    align-self: flex-start;
+    justify-content: center;
+    align-content: flex-start;
+    width: 20%;
+    height: 90%;
+    min-width: 0%;
+    -unity-text-align: middle-center;
+    top: -8%;
+    opacity: 1;
+    left: 0%;
+    right: 0%;
+    background-color: rgb(105, 153, 255);
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out-sine;
+    scale: 1.2 1.2;
+    transform-origin: center;
 }
