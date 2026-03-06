@@ -15,14 +15,92 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: e37bfc8a2b7af334cafeb1a6108bc586
-  position: {x: -22, y: 4}
+  position: {x: -222.00009, y: -150.28006}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
+    target: {fileID: 0}
+    healingItemTarget: {fileID: 0}
   description: 
   drawGizmos: 0
-  child: {fileID: -5660333016957678146}
+  child: {fileID: 4517910535161472242}
   restartOnSuccess: 1
   restartOnFailure: 0
+--- !u!114 &-7032143105609949497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4489e3e257543504c8fc9f891246af6c, type: 3}
+  m_Name: MoveToPosition
+  m_EditorClassIdentifier: Assembly-CSharp::MoveToPosition
+  state: 0
+  started: 0
+  guid: f532590f9fa8cb64883b20931e842347
+  position: {x: -583, y: 493}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    target: {fileID: 0}
+    healingItemTarget: {fileID: 0}
+  description: 
+  drawGizmos: 0
+  speed: 5
+  stoppingDistance: 0.1
+  updateRotation: 1
+  acceleration: 40
+  tolerance: 1
+--- !u!114 &-6912211461911661274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 871f5e88425dd864281d03a1272adab6, type: 3}
+  m_Name: FindHealingItem
+  m_EditorClassIdentifier: Assembly-CSharp::FindHealingItem
+  state: 0
+  started: 0
+  guid: 5c0b8e97cf2305f47bc90d2de1759e6e
+  position: {x: -764.1, y: 493.0001}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    target: {fileID: 0}
+    healingItemTarget: {fileID: 0}
+  description: 
+  drawGizmos: 0
+--- !u!114 &-6677590323136813653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d4a2e24caf8fe946959e09de58cbdde, type: 3}
+  m_Name: ShootTarget
+  m_EditorClassIdentifier: Assembly-CSharp::ShootTarget
+  state: 0
+  started: 0
+  guid: bb57695c5b089bc408fa9467b02aeaed
+  position: {x: 149.96608, y: 492.99994}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    target: {fileID: 0}
+    healingItemTarget: {fileID: 0}
+  description: 
+  drawGizmos: 0
+  bulletPrefab: {fileID: 0}
+  fireCooldown: 1
+  fireForce: 15
+  damage: 20
+  verticalOffset: 1
 --- !u!114 &-5660333016957678146
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38,14 +116,18 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 74a286b60eaf8ea45b9bd84db9ce177b
-  position: {x: -22, y: 118}
+  position: {x: -193, y: 238}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
+    target: {fileID: 0}
+    healingItemTarget: {fileID: 0}
   description: 
   drawGizmos: 0
   children:
   - {fileID: 6402316061889451186}
   - {fileID: -2247863421084346560}
+  - {fileID: 7751988217313402504}
+  - {fileID: -6677590323136813653}
   - {fileID: -4755641854017797634}
 --- !u!114 &-4755641854017797634
 MonoBehaviour:
@@ -62,12 +144,37 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: d654e6bf449ef0a4e9d4228651cef97e
-  position: {x: 148, y: 289}
+  position: {x: 452.966, y: 492.99994}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
+    target: {fileID: 0}
+    healingItemTarget: {fileID: 0}
   description: 
   drawGizmos: 0
   duration: 1
+--- !u!114 &-2459846592122359676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0106ce27e5102b944b4f8601cba9d34f, type: 3}
+  m_Name: IsHealthLow
+  m_EditorClassIdentifier: Assembly-CSharp::IsHealthLow
+  state: 0
+  started: 0
+  guid: 12efb401dbec29546b5812ae9e68d784
+  position: {x: -952.1, y: 493.0001}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    target: {fileID: 0}
+    healingItemTarget: {fileID: 0}
+  description: 
+  drawGizmos: 0
+  threshold: 40
 --- !u!114 &-2247863421084346560
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -83,9 +190,11 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 6bc6981b00778a744bc6d4097134e636
-  position: {x: -22, y: 289}
+  position: {x: -193.00006, y: 493.00003}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
+    target: {fileID: 0}
+    healingItemTarget: {fileID: 0}
   description: 
   drawGizmos: 0
   speed: 20
@@ -93,6 +202,32 @@ MonoBehaviour:
   updateRotation: 1
   acceleration: 40
   tolerance: 1
+--- !u!114 &-837195411006842390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61431bba79d7d7843b82bf1de71703f5, type: 3}
+  m_Name: Sequencer
+  m_EditorClassIdentifier: Assembly-CSharp::TheKiwiCoder.Sequencer
+  state: 0
+  started: 0
+  guid: 2516e101301eb0d489e5d1bc253564a8
+  position: {x: -570, y: 238}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    target: {fileID: 0}
+    healingItemTarget: {fileID: 0}
+  description: 
+  drawGizmos: 0
+  children:
+  - {fileID: -2459846592122359676}
+  - {fileID: -6912211461911661274}
+  - {fileID: -7032143105609949497}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -114,8 +249,17 @@ MonoBehaviour:
   - {fileID: -4755641854017797634}
   - {fileID: 6402316061889451186}
   - {fileID: -2247863421084346560}
+  - {fileID: 7751988217313402504}
+  - {fileID: -6677590323136813653}
+  - {fileID: -2459846592122359676}
+  - {fileID: -6912211461911661274}
+  - {fileID: 4517910535161472242}
+  - {fileID: -837195411006842390}
+  - {fileID: -7032143105609949497}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
+    target: {fileID: 0}
+    healingItemTarget: {fileID: 0}
 --- !u!114 &4300890025194573056
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -131,12 +275,39 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: ca00e6aa7ca72c144ae99d826e0d13e4
-  position: {x: -22, y: -102}
+  position: {x: -221.99998, y: -244.0894}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
+    target: {fileID: 0}
+    healingItemTarget: {fileID: 0}
   description: 
   drawGizmos: 0
   child: {fileID: -8754077107127582826}
+--- !u!114 &4517910535161472242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 460be9e34c566ea45b9e282b1adcb028, type: 3}
+  m_Name: Selector
+  m_EditorClassIdentifier: Assembly-CSharp::TheKiwiCoder.Selector
+  state: 0
+  started: 0
+  guid: 5fc8cfc764a937e40bd9dc7244e3b374
+  position: {x: -222.00005, y: 46.30001}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    target: {fileID: 0}
+    healingItemTarget: {fileID: 0}
+  description: 
+  drawGizmos: 0
+  children:
+  - {fileID: -837195411006842390}
+  - {fileID: -5660333016957678146}
 --- !u!114 &6402316061889451186
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -152,10 +323,35 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: e8b7b3236babb5b45a8c128a30261cab
-  position: {x: -194, y: 289}
+  position: {x: -394, y: 493}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
+    target: {fileID: 0}
+    healingItemTarget: {fileID: 0}
   description: 
   drawGizmos: 0
   min: {x: -20, y: -20}
   max: {x: 20, y: 20}
+--- !u!114 &7751988217313402504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0374ac3d4730ac418a292d1e0450010, type: 3}
+  m_Name: FindTarget
+  m_EditorClassIdentifier: Assembly-CSharp::FindTarget
+  state: 0
+  started: 0
+  guid: 438d941efe67a6c4695f7dd2d855394e
+  position: {x: -40.03388, y: 492.99994}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    target: {fileID: 0}
+    healingItemTarget: {fileID: 0}
+  description: 
+  drawGizmos: 0
+  searchRadius: 30
